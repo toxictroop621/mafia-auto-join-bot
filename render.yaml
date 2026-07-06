@@ -11,4 +11,5 @@ services:
       - key: API_HASH
         value: "e0d86345e60444945df2b2d5c7135256"
       - key: STRING_SESSION
-        value: "1BVtsOJ0Bu4kinJhn1JWXe46uJOxdrtJ8hxRzb_k-2GyagsklkbfB3sIki6M4a4jyJtsFejK8wzW9PWYT5MktBoQNoDXVU-8t5YnUQz5MdNnlNfQXc2QFeoa3R30urmjpvjrd2sZpfRyRaLTXpfv1Ycpb5Vv-CIrr6ZQaYIR_o0vxX8WjK1_7lE5y133K8OHZNFVAzeWoDgsFFwuSHSk2J3otMyeo68xcz50vsNJa6J__0u_kWSzha7NqbC_iD_zJ0ScPjemoaGK5moBLr0vjMChOArTFoxBlkVgahBDjkHg2jkdM3nPsICayoU5Yj4qLLacLQrs7BgXB3n-KVe9APvHhit1uxKs="
+  sync: false
+  
