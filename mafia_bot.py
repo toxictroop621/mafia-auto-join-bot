@@ -8,9 +8,24 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # --- Get Credentials from Environment Variables ---
-API_ID = int(os.environ.get('API_ID', 0))
-API_HASH = os.environ.get('API_HASH', '')
-STRING_SESSION = os.environ.get('STRING_SESSION', '')
+API_ID = os.environ.get('API_ID')
+API_HASH = os.environ.get('API_HASH')
+STRING_SESSION = os.environ.get('STRING_SESSION')
+
+# --- Debug: Check if variables are loaded ---
+logger.info(f"API_ID: {API_ID}")
+logger.info(f"API_HASH: {API_HASH[:10]}...")  # Only show first 10 chars for safety
+logger.info(f"STRING_SESSION: {STRING_SESSION[:20]}...")  # Only show first 20 chars
+
+# --- Validate credentials ---
+if not API_ID or not API_HASH or not STRING_SESSION:
+    logger.error("Missing environment variables!")
+    logger.error(f"API_ID: {'Set' if API_ID else 'MISSING'}")
+    logger.error(f"API_HASH: {'Set' if API_HASH else 'MISSING'}")
+    logger.error(f"STRING_SESSION: {'Set' if STRING_SESSION else 'MISSING'}")
+    exit(1)
+
+API_ID = int(API_ID)  # Convert to integer
 
 # --- Settings ---
 NOTIFICATION_BOT_ID = 468253535
