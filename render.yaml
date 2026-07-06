@@ -9,7 +9,7 @@ services:
       - key: API_ID
         value: 35614321
       - key: API_HASH
-        value: "e0d86345e60444945df2b2d5c7135256"
+        value: e0d86345e60444945df2b2d5c7135256
       - key: STRING_SESSION
-  sync: false
+        sync: false
   
